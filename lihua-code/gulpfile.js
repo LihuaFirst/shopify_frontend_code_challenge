@@ -48,7 +48,7 @@ function cssTranspile() {
 	return src(paths.styles.input)
 		.pipe(sourcemaps.init()) // initialize sourcemaps first
 		.pipe(sass()) // compile SCSS to CSS
-		.pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
+		//.pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
 		.pipe(sourcemaps.init()) // start sourcemaps 
 		.pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
 		.pipe(dest(paths.styles.output)) // put final CSS in dist folder
@@ -57,7 +57,7 @@ function cssTranspile() {
 
 // CSS Minify: minify css and add suffix
 function cssMinify(){
-	return src(paths.styles.output+'/*.css')
+	return src(paths.styles.output+'/style.css')
 		 .pipe(cleanCSS({
 				debug: true
 			}, (details) => { // minify css
@@ -115,8 +115,8 @@ function connectServer(done) {
 // If any change, run scss and js tasks simultaneously
 function watchTask(done) {
 	watch(paths.input+'/*.html', htmlTask);
-	watch([paths.styles.input, paths.scripts.input],
-		parallel(cssTranspile, jsTranspile));
+	watch(paths.styles.input, series(cssTranspile, cssMinify));
+	watch(paths.scripts.input, series(jsTranspile, jsMinify));
 	done();
 };
 
