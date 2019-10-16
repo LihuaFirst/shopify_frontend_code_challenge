@@ -1,0 +1,20 @@
+$white: #fff;
+$green: #7ab55c;
+$grey: #7b7b7b;
+$purple-light: #5c6ac4;
+$purple-dark: #000639;
+$red: #c23628;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+
+body {
+	font-family: $font-family;
+	font-size: 1rem;
+	background-color: $purple-dark;
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: $white;
+}

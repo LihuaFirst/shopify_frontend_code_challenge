@@ -1,4 +1,4 @@
-#My Working Process
+# My Working Process
 
 1. Understand the requirement
 
@@ -10,6 +10,7 @@ The mockup is a form to sign up for Shopify's newsletter
 2. Setup environment
 * Gulp 4
 * Sass
+* JS Hint
 
 3. Build the page
 HTML > CSS > JS
