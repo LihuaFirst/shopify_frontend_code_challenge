@@ -30,22 +30,23 @@
 
 				<main>
 					<p class="form-title">Subscribe for free marketing tips</p>
+					
 					<form class="needs-validation" novalidate>
 						<div class="form-row">
 							<div class="form-group col-sm-6 col-md-8">
 								<label class="sr-only" for="userEmail">Email Address: </label>
-								<input type="email" class="form-control  form-control-md" placeholder="Email Address" id="userEmail" required>
+								<input type="email" class="form-control  form-control-md" placeholder="Email Address" id="userEmail" name="userEmail" required>
 								<div class="invalid-feedback">
 									Please provide a valid email address.
 								</div>
 							</div>
 							<div class="form-group col-sm-6 col-md-4">
 								<label class="sr-only" for="userInterest">Interested in:</label>
-								<select class="form-control form-control-md" id="userInterest">
-									<option selected>Interested in...</option>
-									<option value="account">Account Management</option>
-									<option value="setup">Store set up</option>
-									<option value="sell">Ways to sell</option>
+								<select class="form-control form-control-md" id="userInterest" name="userInterest">
+									<option value="0" selected>Interested in...</option>
+									<option value="1">Account Management</option>
+									<option value="2">Store set up</option>
+									<option value="3">Ways to sell</option>
 								</select>
 							</div>
 						</div>
