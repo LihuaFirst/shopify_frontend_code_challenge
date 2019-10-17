@@ -79,6 +79,10 @@ body {
       background-color: rgba($purple-light, 0.8);
       border-color: rgba($purple-light, 0.8);
    }
+   &:disabled {
+      background-color: rgba($grey, 0.8);
+      border-color: rgba($grey, 0.8);
+   }
 }
 
 

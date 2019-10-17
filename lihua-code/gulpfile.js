@@ -6,18 +6,13 @@ const {src, dest, watch, series, parallel } = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 const replace = require('gulp-replace');
-
 const del = require('del');
 const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const connect = require('gulp-connect');
-const open = require('gulp-open');
 const uglify = require('gulp-uglify-es').default;
 
 // Configuration File paths
@@ -48,7 +43,6 @@ function cssTranspile() {
 	return src(paths.styles.input)
 		.pipe(sourcemaps.init()) // initialize sourcemaps first
 		.pipe(sass()) // compile SCSS to CSS
-		//.pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
 		.pipe(sourcemaps.init()) // start sourcemaps 
 		.pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
 		.pipe(dest(paths.styles.output)) // put final CSS in dist folder
