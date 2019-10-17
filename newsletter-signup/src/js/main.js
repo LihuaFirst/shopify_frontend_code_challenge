@@ -58,15 +58,16 @@
          // log the form data
          console.log('email: ' + userEmail + '; interested in: ' + userInterest);
 
+         var formData;
          if (userInterest == 0) { // if user didn't select interest       
-            var formData = {
+            formData = {
                "email": "sydney@fife"
-            }
+            };
          } else {
-            var formData = {
+            formData = {
                "email": "eve.holt@reqres.in",
                "password": "pistol"
-            }
+            };
          }
 
 
