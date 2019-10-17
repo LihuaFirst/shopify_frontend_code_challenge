@@ -86,7 +86,7 @@
             })
             .fail(function () {
                // display error message
-               $("#result").html('<p class="text-danger" role="alert">Sorry something went wrong.</div>');
+               $("#result").html('<p class="text-danger" role="alert">Testing purpose, please select an interest to try again.</div>');
                console.log('Submit failed!');
             });
       }
