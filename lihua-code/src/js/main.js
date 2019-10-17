@@ -52,11 +52,11 @@
       /* validation using HTMLObjectElement.checkValidity
       if (this.checkValidity() === false) { */
       if (!isEmail(userEmail)) {
-         console.log('Invalid: form is not submitted.');
+         $('#userEmail').focus();
+         console.log('Invalid email: form is not submitted.');
       } else {
          // log the form data
          console.log('email: ' + userEmail + '; interested in: ' + userInterest);
-
 
          if (userInterest == 0) { // if user didn't select interest       
             var formData = {
