@@ -82,7 +82,7 @@ function jsMinify(){
 
 // Copy vendor files
 function copyVendor() {
-	return src([paths.input + '/vendor/'])
+	return src([paths.input + '/vendor/**/*'])
 		.pipe(dest(paths.output + '/vendor'));
 };
 
